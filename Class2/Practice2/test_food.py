@@ -1,6 +1,5 @@
 import food
 
-
 def test_create_item(mock_item):
     assert mock_item.name == "Potato"
     assert mock_item.origin == "Lithuania"

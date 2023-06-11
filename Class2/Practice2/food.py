@@ -22,26 +22,29 @@ class FoodList:
 
 
 available_items = []
-shopping_list = FoodList()
-while True:
-    action = input("What you want to do a - add new item, b - show shopping list, "
-                   "c - show available items, d - delete item, q - exit")
-    if action == 'a':
-        item_name = input("Enter the Item name: ")
-        item_origin = input("Enter the Item origin: ")
-        item_amount = input("Enter the amount that you want: ")
 
-        item = Item(item_name, item_origin)
-        available_items.append(item)
-        shopping_list.add_item(item, item_amount)
-    elif action == 'b':
-        print(shopping_list.items)
-    elif action == 'c':
-        print(available_items)
-    elif action == 'd':
-        shopping_list.delete()
-    elif action == 'q':
-        break
+if __name__ == "__main__":
+
+    shopping_list = FoodList()
+    while True:
+        action = input("What you want to do a - add new item, b - show shopping list, "
+                       "c - show available items, d - delete item, q - exit")
+        if action == 'a':
+            item_name = input("Enter the Item name: ")
+            item_origin = input("Enter the Item origin: ")
+            item_amount = input("Enter the amount that you want: ")
+
+            item = Item(item_name, item_origin)
+            available_items.append(item)
+            shopping_list.add_item(item, item_amount)
+        elif action == 'b':
+            print(shopping_list.items)
+        elif action == 'c':
+            print(available_items)
+        elif action == 'd':
+            shopping_list.delete()
+        elif action == 'q':
+            break
 
 
 
